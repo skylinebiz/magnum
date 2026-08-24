@@ -1,6 +1,6 @@
 frappe.ui.form.on("Sales Invoice", {
     refresh(frm) {
-        frm.add_custom_button("Discount Inserter", () => {
+        frm.add_custom_button("Apply Discount", () => {
             frappe.prompt(
                 {
                     fieldname: "discount_percentage",
@@ -55,7 +55,7 @@ frappe.ui.form.on("Sales Invoice", {
                         });
                     });
                 },
-                __("Discount Inserter"),
+                __("Apply Discount"),
                 __("Apply Discount")
             );
         });
